@@ -1,0 +1,40 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body style="background-color:transparent;">
+    <!-- <button (click)="navigate_profile()">View Profile</button>
+    <button (click)="navigate_cart()">Cart details</button>
+    <button (click)="navigate_order()">My Orders</button>
+    <button (click)="Logout()">Log out</button> -->
+    <!-- <button class="btn btn-primary" (click)="get_api()">Get Products</button> -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div *ngFor="let item of productdetail">
+                        <div class="col-lg-4">
+                            <div class="card" id="itemdiv" style=" background-image: linear-gradient(to bottom,white,white,#A2ECE6);">
+                                <div class="card-body" id="div1">
+                                    <!-- <h6>{{item.productid}}</h6> -->
+                                    <img src="{{item.productImage}}" alt="no data" height="100px" width="100px" />
+                                    <h4 style="color: #156760">{{item.productname}}</h4>
+                                    <h6>{{item.productDesc}}</h6>
+                                    <h4 style="color: #2F4F4F">{{item.price|currency:'INR'}}</h4>
+                                    <button class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none; padding: 1.5% 42%;"  (click)="post_api(item.productid,item.productImage,item.productname,item.productDesc,item.price)">Addtocart</button>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

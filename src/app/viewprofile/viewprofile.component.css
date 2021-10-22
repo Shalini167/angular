@@ -1,0 +1,82 @@
+/* #viewdiv {
+    width: 780px;
+    padding: 50px;
+    height: 530px;
+    margin: auto; */
+    /*overflow: hidden;
+    margin: auto;
+    margin: 20 0 0 400px;
+    padding: 70px;*/
+    /* text-align: center;
+    background-image: linear-gradient(to right,#A2ECE6,#24B3A8,#1D8D84);
+    border-radius: 15px;
+} */
+
+#viewdiv {
+    width: 380px;
+    padding: 50px;
+    height: 550px;
+    margin: auto;
+    /*overflow: hidden;
+    margin: auto;
+    margin: 20 0 0 400px;
+    padding: 70px;*/
+    text-align: center;
+    background-image: linear-gradient(to right,#A2ECE6,#24B3A8,#1D8D84);
+    border-radius: 15px;
+}
+ 
+input:hover[type="submit"] {
+    border-radius: 20%;
+    border: none;
+    border-color: bisque;
+    background-color: antiquewhite;
+}
+
+input.slide-hover-left-1 {
+    background-image: linear-gradient(0, #156760, #156760);
+    background-size: 0;
+    transition: .8s;
+    background-repeat: no-repeat;
+}
+
+    input.slide-hover-left-1:hover {
+        background-size: 100%;
+        color: #fff;
+    }
+
+button:hover[type="submit"] {
+    border-radius: 20%;
+    border: none;
+    border-color: bisque;
+    background-color: antiquewhite;
+}
+
+button.slide-hover-left-1 {
+    background-image: linear-gradient(0, #156760, #156760);
+    background-size: 0;
+    transition: .8s;
+    background-repeat: no-repeat;
+}
+
+    button.slide-hover-left-1:hover {
+        background-size: 100%;
+    }
+    dt{
+        float: left;
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    dd{
+        float: left;
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    dl{
+    width: 100%;
+    }
+     
+
+    
+     
+    

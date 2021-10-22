@@ -1,0 +1,43 @@
+input:hover[type="submit"] {
+    border-radius: 20%;
+    border: none;
+    border-color: bisque;
+    background-color: antiquewhite;
+}
+
+input.slide-hover-left-1 {
+    background-image: linear-gradient(0, #156760, #156760);
+    background-size: 0;
+    transition: .8s;
+    background-repeat: no-repeat;
+}
+
+    input.slide-hover-left-1:hover {
+        background-size: 100%;
+        color: #fff;
+    }
+
+button:hover[type="submit"] {
+    border-radius: 20%;
+    border: none;
+    border-color: bisque;
+    background-color: antiquewhite;
+}
+
+button.slide-hover-left-1 {
+    background-image: linear-gradient(0, #156760, #156760);
+    background-size: 0;
+    transition: .8s;
+    background-repeat: no-repeat;
+}
+
+    button.slide-hover-left-1:hover {
+        background-size: 100%;
+    }
+    th {
+        color: white;
+        padding: 10px 0.5%;
+    }
+    td{
+        padding: 10px 0.5%;
+    }

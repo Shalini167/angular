@@ -1,0 +1,71 @@
+/* #logindiv {
+    width: 300px;
+    height: 480px;
+    /*overflow: hidden;*/
+    /* margin-left: 36%; */
+    /* margin-top: 3%; */
+    /*margin: 20 0 0 450px;*/
+    /* padding: 30px;
+    background-image: linear-gradient(to right,#A2ECE6,#24B3A8,#1D8D84);
+    border-radius: 15px; */
+    /* text-align:center; */
+/* }
+#formdiv{
+    text-align:center;
+} */ 
+label{
+    color: white;
+}
+.error{
+    color:red;
+    }
+#logindiv {
+    width: 300px;
+    height: 950px;
+    /*overflow: hidden;*/
+    margin-left: 36%;
+    margin-top: 3%;
+    /*margin: 20 0 0 450px;*/
+    padding: 30px;
+    background-image: linear-gradient(to right,#A2ECE6,#24B3A8,#1D8D84);
+    border-radius: 15px;
+    text-align:center;
+}
+
+input:hover[type="submit"] {
+    border-radius: 20%;
+    border: none;
+    border-color: bisque;
+    background-color: antiquewhite;
+}
+
+input.slide-hover-left-1 {
+    background-image: linear-gradient(0, #156760, #156760);
+    background-size: 0;
+    transition: .8s;
+    background-repeat: no-repeat;
+}
+
+    input.slide-hover-left-1:hover {
+        background-size: 100%;
+        color: #fff;
+    }
+
+button:hover[type="submit"] {
+    border-radius: 20%;
+    border: none;
+    border-color: bisque;
+    background-color: antiquewhite;
+}
+
+button.slide-hover-left-1 {
+    background-image: linear-gradient(0, #156760, #156760);
+    background-size: 0;
+    transition: .8s;
+    background-repeat: no-repeat;
+}
+
+    button.slide-hover-left-1:hover {
+        background-size: 100%;
+        color: #fff;
+    }

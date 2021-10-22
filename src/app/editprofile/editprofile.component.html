@@ -1,0 +1,73 @@
+<head>    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>      
+ </head>
+<div class="justify-content-center" id="signupdiv">
+    <h1 style="text-align: center; color: #A2ECE6; font-size: 40px; ">EditProfile</h1>
+    <div class="col-md-12">
+        <form #EditCustomerForm="ngForm" (ngSubmit)="put_api(user.userid,EditCustomerForm.value)">                                                                                                              
+                                                                            
+            <!-- <label for="userid" class="control-label" >User Id</label> -->
+            <input type="hidden" userid="userid" name="userid" [(ngModel)]="user.userid" class="form-control"required><br>
+
+            <label for="username" class="control-label">Username</label>
+            <input type="text" id="username" name="username" [(ngModel)]="user.username" #ename="ngModel" class="form-control"required><br>
+            <div class="error"  *ngIf="ename.touched && ename.invalid">Name is required</div>
+
+            <label for="gender" class="control-label" >Gender</label>
+            <input type="text" id="gender" #egender="ngModel" name="gender" [(ngModel)]="user.gender" class="form-control"required><br>
+            <div class="error"  *ngIf="egender.touched && egender.invalid">Gender is required</div> 
+
+            <label for="age"class="control-label"style="color:white;">Age</label><br>
+            <input type="number" id="age" [(ngModel)]="user.age" name="age"class="form-control" pattern="^(?:1[01][0-9]|120|1[7-9]|[2-9][0-9])$" default=18 #age="ngModel" placeholder="Enter age" required/><br>
+            <div class="error"  *ngIf="age.touched && age.invalid && age.value!=0">Age is required</div> 
+            <div class="error" *ngIf="age.errors?.pattern">Enter correct age(Does not match the age limit)</div>
+   
+            <label for="address" class="control-label">Address</label>
+            <input type="text" id="address" name="address" [(ngModel)]="user.address" #eaddr="ngModel" class="form-control"required><br>
+            <div class="error"  *ngIf="eaddr.touched && eaddr.invalid">Address is required</div> 
+            
+            <label for="email" class="control-label">Email</label>
+            <input type="text" id="email" name="email" [(ngModel)]="user.email" #eemail="ngModel" minlength="13" class="form-control"required><br>
+            <div class="error"  *ngIf="eemail.touched && eemail.invalid">Email is required</div>
+            <div class="error" *ngIf="eemail.errors?.minlength">InValid email </div>
+
+
+            <label for="phone" class="control-label" class="control-label">Phone</label>
+            <input type="tel" id="phone" name="phone" [(ngModel)]="user.phone" #ephone="ngModel" class="form-control" required minlength="10" maxlength="10"  pattern="[6-9]{1}[0-9]{9}"><br>
+            <div class="error"  *ngIf="ephone.touched && ephone.invalid">Phone is required</div>  
+            <div class="error" *ngIf="ephone.errors?.minlength">Phone number should be 10 numbers </div> 
+            <div class="error" *ngIf="ephone.errors?.pattern">Only Valid phone numbers</div>  
+            <div class="error" *ngIf="ephone.errors?.min">Enter valid mobile number</div>
+             
+
+            <label for="password" class="control-label">Password</label>
+            <input type="text" id="password" name="password" [(ngModel)]="user.password" #epass="ngModel" minlength="3" class="form-control" required><br>
+            <div class="error" *ngIf="epass.errors?.minlength">Password  should be 3 characters </div>
+        <div class="error"  *ngIf="epass.touched && epass.invalid">Password is required</div> 
+            
+            <input type="submit" [disabled]="EditCustomerForm.invalid" value="submit" class="btn btn-primary slide-hover-left-1 " style="background-color: #1D8D84; border: none; padding: 7px 30px;margin-left: 45px;">
+            
+        </form>
+        <br>
+       
+        <button class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none; padding: 7px 30px; color: white;margin-left: 50px;"(click)="navigate_back()">Back</button>
+    </div>
+</div>
+<!-- <label for="userid" class="control-label">User Id</label>
+            <input type="number" userid="userid" name="userid" [(ngModel)]="user.userid" class="form-control"><br>
+            <label for="username" class="control-label">Username</label>
+            <input type="text" id="username" name="username" [(ngModel)]="user.username" class="form-control"><br>
+            <label for="gender" class="control-label">Gender</label>
+            <input type="text" id="gender" name="gender" [(ngModel)]="user.gender" class="form-control"><br>
+            <label for="age" class="control-label">Age</label>
+            <input type="number" id="age" name="age" [(ngModel)]="user.age" class="form-control"><br>
+            <label for="address" class="control-label">Address</label>
+            <input type="text" id="address" name="address" [(ngModel)]="user.address" class="form-control"><br>
+            <label for="email" class="control-label">Email</label>
+            <input type="text" id="email" name="email" [(ngModel)]="user.email" class="form-control"><br>
+            <label for="phone" class="control-label">Phone</label>
+            <input type="number" id="phone" name="phone" [(ngModel)]="user.phone" class="form-control"><br>
+            <label for="password" class="control-label">Password</label>
+            <input type="text" id="password" name="password" [(ngModel)]="user.password" class="form-control"><br>
+            <input type="submit" value="Submit" class="btn btn-primary slide-hover-left-1 " style="background-color: #1D8D84; border: none; ">
+            <button class="btn btn-primary slide-hover-left-1" (click)="navigate_back()" style="background-color: #1D8D84; border: none; padding: 7px 30px; color: white;margin-left: 30px;">Back</button> -->

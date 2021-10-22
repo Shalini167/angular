@@ -1,0 +1,34 @@
+
+<div class="justify-content-center" id="logindiv">
+    <h3 style="text-align: center; color: #A2ECE6; font-size: 25px; ">Net Banking</h3>
+    <i class="fa fa-credit-card" style="font-size: 50px; color: black; margin-left:30%"></i>
+    <!-- <h4 style="color:white;">Total amount  : {{getprice()|currency:'INR'}}</h4> -->
+    <form>
+        <div class="form-group">
+            <label class="control-label" style=" color: white;">Select your bank</label>
+            <select class="form-control">
+                
+                <option>SBI Bank</option>
+                <option>ICICI Bank</option>
+                <option>HDFC Bank</option>
+                <option>IOB Bank</option>
+                <option>AXIS Bank</option>
+                <option>SWISS Bank</option>
+                <option>FEDERAL Bank</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" style="color:white;">Account Number</label>
+            <input type="text" class="form-control" inputmode="numeric" pattern="/^(?:3[47][0-9]{9})$/" autocomplete="cc-number" maxlength="12" placeholder="xxxx xxxx xxxx" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label" style="color:white;">Password</label>
+            <input type="password" class="form-control" maxlength="15" required/>
+        </div>
+    </form>
+    <div>
+        <a ><button class="btn btn-primary slide-hover-left-1" (click)="orderpay()" style="background-color: #1D8D84; border: none;   margin-top: 10%; color: white">Pay {{getprice()|currency:'INR'}}</button></a>
+        <a ><button class="btn btn-primary slide-hover-left-1" (click)="navigate_back()" style="background-color: #1D8D84; border: none;margin-left:40px; margin-top: 10%; color: white">Back</button></a>
+        
+    </div>
+</div>

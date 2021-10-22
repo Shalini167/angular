@@ -1,0 +1,10 @@
+
+
+<div class="justify-content-center" id="logindiv">
+    <h5 style="text-align: center; color: #A2ECE6; font-size: 30px; ">Do you want to confirm the order?</h5><br>
+    <h4 style="color:white">Total amount  : {{getprice()|currency:'INR'}}</h4>
+    <div>
+        <a ><button class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none;  margin-top: 10%; color: white" (click)="orderpay()">Yes</button></a>
+        <a ><button (click)="navigate_back()" class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none; margin-left: 35%; margin-top: 10%; color: white">No</button></a>
+    </div> 
+</div>

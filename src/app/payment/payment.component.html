@@ -1,0 +1,26 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="justify-content-center" id="logindiv">
+    <h1 style="text-align: center; color: #A2ECE6; font-size: 40px; ">Payment</h1>
+    <form>
+        <i class="fa fa-qrcode" style="font-size: 30px; color: black;"></i>
+        &nbsp;&nbsp;&nbsp;
+        <a class="btn btn-sm btn-outline-light" (click)="navigate_upi()">UPI</a>
+        <hr />
+        <i class="fa fa-credit-card" style="font-size: 30px; color: black;"></i>
+        &nbsp;
+        <a class="btn btn-sm btn-outline-light" (click)="navigate_cardpayment()" >Credit/Debit Card</a>
+        <hr />
+        <i class="fa fa-money" style="font-size: 30px; color: black;"></i>
+        &nbsp;
+        <a class="btn btn-sm btn-outline-light" (click)="navigate_cod()">Cash on delivery</a>
+        <hr />
+        <i class="fa fa-inr" style="font-size: 30px; color: black;"></i>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-sm btn-outline-light" (click)="navigate_netbanking()">NetBanking</a>
+    </form>
+    <div>
+        <a><button class="btn btn-primary slide-hover-left-1" (click)="navigate_back()" style="background-color: #1D8D84; border: none; padding: 7px 30px; color: white; margin-top: 20px;margin-left:30px;">Back to cart</button></a>
+    </div>
+</div>

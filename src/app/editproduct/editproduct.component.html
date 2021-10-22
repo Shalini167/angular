@@ -1,0 +1,19 @@
+
+<div id="editdiv" class="justify-content-center">
+    <h1 style="text-align:center;color:#A2ECE6;font-size:30px;">Edit Product</h1><br>
+    <form #PutEmployeeForm="ngForm" (ngSubmit)="put_api(admin.productid,PutEmployeeForm.value)">
+        
+        <input type="hidden"class="form-control"  id="productid" name="productid" [(ngModel)]="admin.productid"><br>
+        <label for="productname" class="control-label">Product Name</label>
+        <input type="text" class="form-control" id="productname" name="productname" [(ngModel)]="admin.productname"><br>
+        <label for="productImage" class="control-label">Product Image</label><br>
+        <input type="text" class="form-control" id="productImage" name="productImage" [(ngModel)]="admin.productImage"><br>
+        <label for="productDesc" class="control-label">Product Description</label><br>
+        <input type="text"class="form-control"  id="productDesc" name="productDesc" [(ngModel)]="admin.productDesc"><br>
+        <label for="price" class="control-label">Price</label><br>
+        <input type="number"class="form-control" id="price" name="price" [(ngModel)]="admin.price"><br><br>
+        <input  class="btn btn-primary slide-hover-left-1" [disabled]="PutEmployeeForm.invalid"  style="background-color: #1D8D84; border: none; padding: 7px 25px;" type="submit" value="Submit">
+        <button class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none;  padding: 7px 30px; margin-left: 5px;" (click)="navigate_back()">Back</button>
+    </form>
+    
+</div>

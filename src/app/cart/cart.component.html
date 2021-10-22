@@ -1,0 +1,100 @@
+<!-- <p>cart works!</p>
+<div>
+    <button class="btn btn-primary" (click)="getcartbyuserid_api(1004)">Get_cart method</button>
+    <div class="card" *ngFor="let item of addtocart">
+    
+        <span>CartId </span><span>{{item.cartid}}</span>
+        <span>UserId </span><span>{{item.userid}}</span>
+        <span>ProductId </span><span>{{item.productid}}</span>
+        <span>Product Image </span>{{item.productImage}}
+        <span>Product Name </span>{{item.productname}}
+        <span>Product Desc </span>{{item.productDesc}}
+        <span>Price </span>{{item.price}}
+        <button class="btn btn-danger" (click)="deletecart_api(item.cartid)">Remove from cart</button>
+        </div>
+</div> -->
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<div *ngIf="IsAuthendicated()">
+<div style="width: 90%; margin-left: 4.5%;">
+<!-- <button class="btn btn-primary" (click)="getcartbyuserid_api(1005)">Cart Details</button> -->
+<table class="table">
+    <thead>
+        <tr style="background-color: #156760">
+            <!-- <th>
+                Cart Id
+            </th>
+            <th>
+                User ID
+            </th>
+            <th>
+                Product ID
+            </th> -->
+            <th>
+                Product
+            </th>
+            <th>
+                Product Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <div *ngFor="let item of addtocart"> -->
+        <!-- <div *ngFor="let item of addtocart" style="background-image: linear-gradient(to right,white,white,#A2ECE6)"> -->
+        <tr  *ngFor="let item of addtocart" style="background-image: linear-gradient(to right,white,white,#A2ECE6)">
+            <!-- <td style="color: #156760">
+                {{item.cartid}}
+            </td>
+            <td style="color: #156760">
+                {{item.userid}}
+            </td>
+            <td style="color: #156760">
+                {{item.productid}}
+            </td> -->
+            <td style="color: #156760">
+                <img src="{{item.productImage}}" alt="no data" height="100" width="100" />
+            <td style="color: #156760">
+                {{item.productname}}
+            </td>
+            <td style="color: #156760">
+                {{item.productDesc}}
+            </td>
+            <td style="color: #156760">
+                {{item.price|currency:'INR'}}
+            </td>
+
+            <td> 
+                <button (click)="deletecart_api(item.cartid)"><img src="/assets/delete.png" width="35" height="35" /></button>
+            </td>
+              <!-- {{tamt}} = {{tamt}} + {{item.price}};   -->
+              <!-- <p>{{a+=Number(item.price)}}</p> -->
+        </tr>
+        
+    </tbody>
+</table>
+</div>
+<div><h5 style="color: #156760;text-align:right; font-size:20px ;margin-right:100px;">Your total price is Rs.{{a}}</h5></div>
+<div>
+    <a><button class="btn btn-primary slide-hover-left-1" (click)="navigate_payment()" style="background-color: #1D8D84; border: none; padding: 7px 30px; color: white;margin-left: 450px;">Buy now</button></a>
+    <button class="btn btn-primary slide-hover-left-1" (click)="navigate_back()" style="background-color: #1D8D84; border: none; padding: 7px 30px; color: white;margin-left: 20px;">Back to products</button>
+</div>
+
+</div>

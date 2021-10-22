@@ -1,0 +1,74 @@
+
+<div class="justify-content-center" id="logindiv">
+    <h3 style="text-align: center; color: #A2ECE6; font-size: 40px; ">Card Payment</h3>
+    <i class="fa fa-credit-card" style="font-size: 50px; color: black; margin-left:30%"></i>
+    
+
+        <h4 style="color:white;margin-left:35px">Total amount  : {{getprice()|currency:'INR'}}</h4>
+
+    <form #cartform="ngForm" >
+        <div class="form-group">
+            <label class="control-label" style=" color: white;">Card type</label>
+            <select class="form-control">
+                <option>Debit Card</option>
+                <option>Credit Card</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" style="color:white;">Card Number</label>
+            <input type="tel" class="form-control" [(ngModel)]="cardnumber"   pattern="/^(?:3[47][0-9]{13})$/" pattern1="[0]{16}" #cno="ngModel" autocomplete="cc-number" minlength="16" maxlength="16" placeholder="xxxx xxxx xxxx xxxx" required>
+            <div class="error" *ngIf="cno.errors?.pattern">InValid email </div>
+            <div class="error"  *ngIf="cno.touched && cno.invalid">Card number is required</div>
+             <div class="error" *ngIf="cno.errors?.pattern1">Should not be 0</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" style="color:white;">Exp Month and Year</label>
+            <input type="month" class="form-control" required/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" style="color:white;">CVV</label>
+            <input type="password" class="form-control" maxlength="3" required/>
+        </div>
+        
+        <div>
+
+            <a ><button class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none;  margin-top: 5%; margin-left:50px; color: white" [disabled]="cartform.invalid" (click)="orderpay()">Pay</button></a>
+            <a ><button class="btn btn-primary slide-hover-left-1" (click)="navigate_back()" style="background-color: #1D8D84; border: none; margin-left: 35%; margin-top: 5%; color: white">Back</button></a>
+        </div>
+    </form>
+   
+    
+ </div>
+
+ <!-- <div class="justify-content-center" id="logindiv">
+    <h1 style="text-align: center; color: #A2ECE6; font-size: 30px; ">BestBuy Pharmacy</h1>
+    <h6 style="text-align:center;color:white;font-size:15px;">Sign in to your Account</h6> 
+    
+    <form #LoginJWTForm="ngForm" name="login" (ngSubmit)="post_api(LoginJWTForm.value)"  >
+        <div class="form-group justify-content-center" >
+            <div>
+        <i class="fa fa-user" style="font-size: 30px; color: black;"></i>
+        <label for="email"style="color:white;"class="control-label">Email</label><br>
+        <input type="email" name="email"  [(ngModel)]="user.email" class="form-control" minlength="10" #name="ngModel"  required/><br>
+        <div class="error" *ngIf="name.errors?.minlength">InValid email </div>
+        <div class="error"  *ngIf="name.touched && name.invalid">Email is required</div> 
+        
+        </div>
+        </div>
+        <div class="form-group justify-content-center" >
+        <i class="fa fa-lock" style="font-size: 30px; color: black;"></i>
+        <label for="password" style="color:white;"class="control-label">Password</label><br>
+        <input type="password"  id="password" [(ngModel)]="user.password" name="password" #pass="ngModel" minlength="3" class="form-control" required/><br>
+        <div class="error" *ngIf="pass.errors?.minlength">Password  should be 3 characters </div>
+        <div class="error"  *ngIf="pass.touched && pass.invalid">Password is required</div> 
+        </div>
+        
+        <div class="form-group justify-content-center" >
+            <input type="submit"value="submit" [disabled]="LoginJWTForm.invalid" value="Login" class="btn btn-primary slide-hover-left-1 " style="background-color: #1D8D84; border: none; margin-left: 35%;"/>
+            <div class="error" *ngIf="invalid">{{invalid}}</div>
+            <h6 class="fs" style="color:white;">Don't have an account? <a  (click)="navigate_Signup()" style="color: #A2ECE6;">Create New</a></h6> 
+        </div>
+        
+    </form>
+
+</div> -->

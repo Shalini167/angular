@@ -1,0 +1,11 @@
+
+<div class="justify-content-center" id="logindiv">
+    <h1 style="text-align: center; color: #A2ECE6; font-size: 40px; ">UPI Payment</h1>
+    <h3 style="text-align: center; color: #A2ECE6; font-size: 25px; ">Scan here</h3>
+    <img src="/assets/QR1.jpeg" style="margin-left:3%;margin-left:10px" alt="nodata" height="150" width="150" /><br>
+    <!-- <h4 style="color:white">Total amount  : {{getprice()|currency:'INR'}}</h4> -->
+    <div>
+        <a ><button class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none;  margin-top: 10%; color: white" (click)="orderpay()">Pay {{getprice()|currency:'INR'}}</button></a>
+        <a><button class="btn btn-primary slide-hover-left-1" (click)="navigate_back()" style="background-color: #1D8D84; border: none; margin-left:15px; margin-top: 10%; color: white">Back</button></a>
+    </div>
+</div>

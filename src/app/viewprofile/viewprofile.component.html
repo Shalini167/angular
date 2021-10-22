@@ -1,0 +1,79 @@
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<div class="row justify-content-center" id="viewdiv">
+    <i class="fa fa-user" style="font-size: 50px; color: white;align-content:center;"></i>
+    &nbsp;&nbsp;&nbsp;
+    <h1 style="text-align: center; color: #A2ECE6; font-size: 40px; ">Profile</h1>
+    <dl >
+        <!-- <dt class="col-sm-2" style="color: #1D8D84;">
+            User Id
+        </dt>
+        <dd class="col-sm-10" style="color:white;">
+            {{user.userid}}
+        </dd> -->
+        <dt class="col-sm-2" style="color: #1D8D84;">
+            Username
+        </dt>
+        <dd class="col-sm-10" style="color:white;">
+            {{user.username}}
+        </dd>
+        <dt class="col-sm-2" style="color: #1D8D84;">
+            Gender
+        </dt>
+        <dd class="col-sm-10" style="color:white;">
+            {{user.gender}}
+        </dd>
+        <dt class="col-sm-2" style="color: #1D8D84;">
+            Age
+        </dt>
+        <dd class="col-sm-10" style="color:white;">
+            {{user.age}}
+        </dd>
+        <dt class="col-sm-2" style="color: #1D8D84;">
+            Address
+        </dt>
+        <dd class="col-sm-10" style="color:white;">
+            {{user.address}}
+        </dd>
+        <dt class="col-sm-2" style="color: #1D8D84;">
+            Email
+        </dt>
+        <dd class="col-sm-10" style="color:white;">
+            {{user.email}}
+        </dd>
+        <dt class="col-sm-2" style="color: #1D8D84;">
+            Phone
+        </dt>
+        <dd class="col-sm-10" style="color:white;">
+            {{user.phone}}
+        </dd>
+        <!-- <dt class="col-sm-2" style="color: #1D8D84;">
+            Password
+        </dt>
+        <dd class="col-sm-10" style="color:white;">
+            {{user.password}}
+        </dd> -->
+    </dl>
+    <div>
+        <a ><button  (click)="navigate_editprofile()" class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none; padding: 7px 30px; color: white;margin-top: 20px;">Edit</button></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a ><button class="btn btn-primary slide-hover-left-1" (click)="navigate_back()" style="background-color: #1D8D84; border: none; padding: 7px 30px; color: white;margin-top: 20px;">Back</button></a>
+    </div>
+</div>
+<!-- <div>
+    <h1>Get Employee by ID</h1><br>
+    Userid:{{user.userid}}<br>
+    Username:{{user.username}}<br>
+    Gender:{{user.gender}}<br>
+    Age:{{user.age}}<br>
+    Address:{{user.address}}<br>
+    Email:{{user.email}}<br>
+    Phone:{{user.phone}}<br>
+    Password:{{user.password}}
+</div>
+<br>
+<div> -->

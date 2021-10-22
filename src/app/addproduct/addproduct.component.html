@@ -1,0 +1,28 @@
+
+ <head>    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>      
+ </head>
+<div id="adddiv" class=" justify-content-center">
+    <h3 style="text-align: center; color: #A2ECE6; font-size: 30px; ">Add Product</h3><br>
+    <form #EmployeeForm="ngForm" (ngSubmit)="post_api(EmployeeForm.value)">
+        <label for="productname" class="control-label">Product Name</label><br>
+        <input type="text"  id="productname" name="productname" class="form-control" #pname="ngModel" [(ngModel)]="postproduct.productname" required><br>
+        <div class="error"  *ngIf="pname.touched && pname.invalid">Product name is required</div> 
+        <label for="productImage" class="control-label">Product Image</label><br>
+        <input type="text" id="productImage" class="form-control" name="productImage" #pimg="ngModel" [(ngModel)]="postproduct.productImage" required><br>
+        <div class="error"  *ngIf="pimg.touched && pimg.invalid">Product Image is required</div> 
+        <label for="productDesc" class="control-label">Product Description</label><br>
+        <input type="text" id="productDesc" name="productDesc" class="form-control" #pdesc="ngModel" [(ngModel)]="postproduct.productDesc" required><br>
+        <div class="error"  *ngIf="pdesc.touched && pdesc.invalid">Product Description is required</div> 
+        <label for="price" class="control-label">Price</label><br>
+        <input type="number" id="price" name="price" class="form-control" #price="ngModel" [(ngModel)]="postproduct.price" required><br>
+        <div class="error"  *ngIf="price.touched && price.invalid">Price is required</div> 
+        <input type="submit"  [disabled]="EmployeeForm.invalid" class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none;  padding: 7px 30px;margin-right: 25px;" value="Submit" >
+        <button class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none;  padding: 7px 30px;" (click)="navigate_back()">Back</button>
+    </form>
+</div>
+
+<!-- <input type="Submit" class="form-control " class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none;  padding: 7px 30px;margin-right: 25px;"value="Submit">
+<button class="btn btn-primary slide-hover-left-1 " style="background-color: #1D8D84; border: none;  padding: 7px 30px;" (click)="navigate_back()">Back</button> -->
+<!-- <label for="userid" class="control-label" >Userid</label>
+            <input type="number" userid="userid" name="userid" [(ngModel)]="user.userid" class="form-control"><br> -->

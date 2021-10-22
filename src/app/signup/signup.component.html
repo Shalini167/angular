@@ -1,0 +1,68 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+  </head>
+<div class="justify-content-center" id="logindiv">
+    
+    <i class="fa fa-user justify-content-center" style="font-size: 50px; color:white; margin-left: 5%;"></i>
+    <h6 style="text-align:center;color:white;font-size:20px;">Sign up to create new Account</h6>
+    <form #LoginForm="ngForm" (ngSubmit)="post_api(LoginForm.value)" id="formdiv" >
+        <label for="username"class="control-label"style="color:white;">Name</label><br>
+        <input type="text"   id="Name" [(ngModel)]="user.username" name="username"class="form-control" placeholder="Enter name" #uname="ngModel" required/><br>
+        <!-- <div class="error"  *ngIf="uname.errors?.pattern">Name should not contain numbers or special characters</div> 
+        --><div class="error"  *ngIf="uname.touched && uname.invalid">Name is required</div>  
+ 
+        <!-- <div class="form-group">
+            <label class="control-label"  style=" color: white;" required>Gender</label>
+            <select class="form-control">    
+                           
+                <option>Male</option>
+                <option>Female</option>
+                <option>Transgender</option> 
+            </select>
+             
+        </div> -->
+        
+        <label for="gender"class="control-label"style="color:white;">Gender</label><br>
+        <input type="text" id="Gender" [(ngModel)]="user.gender" name="gender"class="form-control" placeholder="Enter Gender" #gender="ngModel" required/><br>
+        <div class="error"  *ngIf="gender.touched && gender.invalid">Gender is required</div> 
+        
+        <label for="age"class="control-label"style="color:white;">Age</label><br>
+        <input type="number" id="age" [(ngModel)]="user.age" name="age"class="form-control" pattern="^(?:1[01][0-9]|120|1[7-9]|[2-9][0-9])$" default=18 #age="ngModel" placeholder="Enter age" required/><br>
+        <div class="error"  *ngIf="age.touched && age.invalid && age.value!=0">Age is required</div> 
+        <div class="error" *ngIf="age.errors?.pattern">Enter correct age</div>
+   
+        <label for="address"class="control-label"style="color:white;">Address</label><br>
+        <input type="text" id="address" [(ngModel)]="user.address" name="address"class="form-control"placeholder="Enter Address" #addr="ngModel" required/><br>
+        <div class="error"  *ngIf="addr.touched && addr.invalid">Address is required</div> 
+        
+        <label for="email"class="control-label"style="color:white;">Email</label><br>
+        <input type="email" id="email" [(ngModel)]="user.email" name="email"class="form-control" minlength="13" placeholder="Enter Email" #email="ngModel" required/><br>
+        <div class="error" *ngIf="email.errors?.minlength">Invalid email</div>
+        <div class="error"  *ngIf="email.touched && email.invalid">Email is required</div> 
+       
+        <label for="phone" class="control-label" class="control-label">Phone</label>
+        <input type="tel" id="phone" name="phone" [(ngModel)]="user.phone" #ephone="ngModel" class="form-control" required minlength="10" maxlength="10"  pattern="[6-9]{1}[0-9]{9}"><br>
+        <div class="error"  *ngIf="ephone.touched && ephone.invalid">Phone is required</div>  
+        <div class="error" *ngIf="ephone.errors?.minlength">Phone number should be 10 numbers </div> 
+        <div class="error" *ngIf="ephone.errors?.pattern">Only Valid phone numbers</div>  
+        <div class="error" *ngIf="ephone.errors?.min">Enter valid mobile number</div>
+         
+
+        <label for="password"class="control-label"style="color:white;">Password</label><br>
+        <input type="password" id="password" [(ngModel)]="user.password" name="password" minlength="3" placeholder="Enter password" class="form-control" #pass="ngModel" required/><br>
+        <div class="error" *ngIf="pass.errors?.minlength">Password  should be 3 characters </div>
+        <div class="error"  *ngIf="pass.touched && pass.invalid">Password is required</div>  
+      
+        <div class="form-group">
+            <input type="submit" [disabled]="LoginForm.invalid" value="Create" class="btn btn-primary slide-hover-left-1" style="background-color: #1D8D84; border: none;  padding: 7px 30px;" />
+        </div>
+    </form>
+    <h6 class="fs" style="color:white;">Already have an account? <a (click)="navigate_login()" style="color: #A2ECE6;">Sign in</a></h6> 
+
+</div>
